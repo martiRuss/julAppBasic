@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Investors Horizon</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Helvetica", sans-serif;
+        background-color: #f0f2f5;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .hero {
+        height: 100vh;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .title {
+        font-size: 64px;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .subtitle {
+        font-size: 24px;
+        margin-top: 10px;
+      }
+
+      .cta {
+        margin-top: 20px;
+        padding: 10px 30px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .cta:hover {
+        background-color: #0056b3;
+      }
+
+      .section {
+        padding: 60px;
+        text-align: center;
+        background-color: white;
+      }
+
+      .section h2 {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .section-content {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .gallery {
+        background: #f0f2f5;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .image-card {
+        background-color: white;
+        height: 200px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .image-card:hover {
+        transform: scale(1.05);
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #343a40;
+        color: white;
+        font-size: 14px;
+      }
+
+      .footer p {
+        margin: 0;
+      }
+
+      /* Adding gradient backgrounds for the image cards */
+      .image-card:nth-child(1) {
+        background: linear-gradient(
+          135deg,
+          #6a11cb,
+          #2575fc
+        ); /* Purple to Blue gradient */
+      }
+
+      .image-card:nth-child(2) {
+        background: linear-gradient(
+          135deg,
+          #ff758c,
+          #ff7eb3
+        ); /* Pink gradient */
+      }
+
+      .image-card:nth-child(3) {
+        background: linear-gradient(
+          135deg,
+          #36d1dc,
+          #5b86e5
+        ); /* Cyan to Blue gradient */
+      }
+
+      .image-card:nth-child(4) {
+        background: linear-gradient(
+          135deg,
+          #f093fb,
+          #f5576c
+        ); /* Pink to Orange gradient */
+      }
+
+      .image-card:nth-child(5) {
+        background: linear-gradient(
+          135deg,
+          #fc6076,
+          #ff9a44
+        ); /* Coral to Orange gradient */
+      }
+
+      .image-card:nth-child(6) {
+        background: linear-gradient(
+          135deg,
+          #43cea2,
+          #185a9d
+        ); /* Green to Blue gradient */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero">
+        <h1 class="title">Investors Horizon</h1>
+        <p class="subtitle">Your Trusted Partner in Investment Property</p>
+        <a href="#about" class="cta">Learn More</a>
+      </header>
+
+      <section id="about" class="section">
+        <div class="section-content">
+          <h2>About Us</h2>
+          <p>
+            Investors Horizon is a data-driven research-based Buyers Agency,
+            helping you build your property portfolio for long-term growth. We
+            ensure maximum benefit and satisfaction for a lifetime relationship.
+          </p>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <div class="image-card"></div>
+          <div class="image-card"></div>
+          <div class="image-card"></div>
+          <div class="image-card"></div>
+          <div class="image-card"></div>
+          <div class="image-card"></div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2024 Investors Horizon. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>

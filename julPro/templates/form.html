@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate DoM</title>
+    <style>
+      body {
+        font-family: "Poppins", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .form-container {
+        background: #ffffff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 40px 30px;
+        width: 400px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .form-container:hover {
+        transform: translateY(-5px);
+      }
+
+      h1 {
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.2s ease;
+      }
+
+      input:focus,
+      select:focus {
+        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+        border-color: #007bff;
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(90deg, #ff758c 0%, #ff7eb3 100%);
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: linear-gradient(90deg, #ff7eb3 0%, #ff758c 100%);
+      }
+
+      input[name="suburb"] {
+        width: 90%;
+      }
+
+      input[name="price"] {
+        width: 90%;
+      }
+
+      button:active {
+        transform: scale(0.98);
+      }
+
+      @media (max-width: 500px) {
+        .form-container {
+          width: 90%;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Calculate Days on Market</h1>
+      <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Calculate</button>
+      </form>
+    </div>
+  </body>
+</html>
